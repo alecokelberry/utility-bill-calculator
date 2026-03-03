@@ -7,7 +7,7 @@ Orchestrates the loading of data and execution of the calculator.
 
 import sys
 from calculator import UtilityCalculator
-from bills import load_dec_2025_jan_2026_data
+from bills import load_dec_2025_jan_2026_data, load_jan_2026_feb_2026_data
 
 def main():
     print("Welcome to the Utility Bill Calculator")
@@ -18,7 +18,7 @@ def main():
     # For now, default to the requested archived bill data.
     
     try:
-        data = load_dec_2025_jan_2026_data()
+        data = load_jan_2026_feb_2026_data()
         calc.load_data(data)
         calc.calculate()
         calc.print_report()
